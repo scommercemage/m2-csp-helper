@@ -17,27 +17,10 @@ This Magento 2 extension helps you resolve Content Security Policy (CSP) issues 
 composer require scommerce/csp-helper
 ```
 
-2. Include CSP Helper in your helper class as shown below
+2. In your code, wherever a **<script>** tag is used, incorporate the helper class and append the **getNonce** function as shown below
 ```bash
-use Scommerce\CspHelper\Helper\CspHelper;
-
-protected $cspHelper;
-
-public function __construct(
-CspHelper $cspHelper
-) {
-    $this->cspHelper = $cspHelper;
-}
-
-public function getNonce()
-{
-    return $this->cspHelper->generateNonce();
-}
-```
-
-3. In your code, wherever a **<script>** tag is used, incorporate the helper class and append the **getNonce** function as shown below
-```bash
-<script type="text/javascript" <?= $helper->getNonce(); ?>>
+<?php $cspHelper = $this->helper('\Scommerce\CspHelper\Helper\CspHelper'); ?>
+<script type="text/javascript" <?= $cspHelper->generateNonce(); ?>>
        // Your script code here
 </script>
 ```
