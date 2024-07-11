@@ -35,7 +35,7 @@ public function getNonce()
 }
 ```
 
-3. In your code, wherever a <script> tag is used, incorporate the helper class and append the getNonce function as shown below
+3. In your code, wherever a **<script>** tag is used, incorporate the helper class and append the **getNonce** function as shown below
 ```bash
 <script type="text/javascript" <?= $helper->getNonce(); ?>>
        // Your script code here
@@ -44,7 +44,7 @@ public function getNonce()
 
 **Important Note**
 
-If the generateNonce() function fails to generate a nonce (potentially on Magento versions 2.4.6 and below), an empty string will be added to the nonce attribute. While this might work in some cases, it's not ideal from a security perspective.
+If the **generateNonce()** function fails to generate a nonce (potentially on Magento versions 2.4.6 and below), an empty string will be added to the nonce attribute.
 
 **How it Works**
 
@@ -60,12 +60,11 @@ The extension utilises the **Scommerce\CspHelper\Helper\CspHelper** class. This 
 
 **Need Help**
 
-If you require assistance with implementing this on your website to resolve CSP inline JavaScript errors, feel free to reach out to us via email at [support@scommerce-mage.com](mailto:support@scommerce-mage.com)
-.
+If you require assistance with implementing this on your website to resolve CSP inline JavaScript errors, feel free to reach out to us via email at [support@scommerce-mage.com](mailto:support@scommerce-mage.com).
 
 **Looking for a Complete Solution?**
 
-For a comprehensive resolution of other CSP errors on your site, consider utilizing our [**CSP Whitelist Extension**](https://www.scommerce-mage.com/magento-2-csp-whitelisting.html). It provides the capability to whitelist URLs for any CSP directive directly from the Magento admin panel. Learn more about it [here](https://www.scommerce-mage.com/magento-2-csp-whitelisting.html).
+For a comprehensive resolution of other CSP errors on your site, consider utilizing our <a href="https://www.scommerce-mage.com/magento-2-csp-whitelisting.html" target="_blank">CSP Whitelist Extension</a>. It provides the capability to whitelist URLs for any CSP directive directly from the Magento admin panel. Learn more about it <a href="https://www.scommerce-mage.com/magento-2-csp-whitelisting.html" target="_blank">here</a>.
 
 
 **Disclaimer**
