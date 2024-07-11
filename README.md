@@ -14,7 +14,6 @@ This Magento 2 extension helps you resolve Content Security Policy (CSP) issues 
 1. Add the repository:
 
 ```bash
-composer config repositories.scommerce-m2-csp-helper git git@github.com:scommercemage/m2-csp-helper.git
 composer require scommerce/csp-helper
 ```
 
